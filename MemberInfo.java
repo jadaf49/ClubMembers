@@ -18,9 +18,13 @@ public class MemberInfo
         return s+"Good Standing: " + hasGoodStanding +"\n";
     }
     
-    //public int getGradYear()
-    { /* implementation not shown */ }
+    public int getGradYear()
+    { 
+        return gradYear;
+    }
 
-    //public boolean inGoodStanding()
-    { /* implementation not shown */ }
+    public boolean inGoodStanding()
+    { 
+        return hasGoodStanding;
+    }
 }

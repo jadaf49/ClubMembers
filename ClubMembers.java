@@ -22,7 +22,22 @@ public class ClubMembers
     public ArrayList<MemberInfo> removeMembers(int year)
     { 
         ArrayList<MemberInfo> alumni = new ArrayList<MemberInfo>();
-        for (int i=0)
+        for (int i=0;i<memberList.size();i++)
+        {
+            MemberInfo member =memberList.get(i);
+            if ((member.getGradYear()<=year) && (member.inGoodStanding()))
+            {
+                alumni.add(member);
+                memberList.remove(i);
+                i--;
+            }
+        }
+        return alumni;
+    }
+
+    public void setMemberList(ArrayList<MemberInfo>members)
+    {
+        memberList=members;
     }
     
 }
